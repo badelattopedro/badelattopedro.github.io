@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Criar Conta</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="firebase-config.js"></script>
+</head>
+<body class="login-page">
+<div class="login-box">
+    <h1>Criar Conta</h1>
+    <input id="email" type="email" placeholder="E-mail">
+    <input id="password" type="password" placeholder="Senha">
+    <button onclick="register()">Criar conta</button>
+    <p>Já tem conta? <a href="index.html">Entrar</a></p>
+</div>
+<script src="auth.js"></script>
+</body>
+</html>
