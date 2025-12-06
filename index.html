@@ -1,26 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Organizador Completo</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Organizador Pro - Login</title>
+<link rel="stylesheet" href="style.css">
+
+<!-- Firebase v8 -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+<script src="firebase-config.js"></script>
 </head>
-<body>
-    <aside class="sidebar">
-        <h2>📂 Menu</h2>
-        <ul>
-            <li onclick="openPage('dashboard')">Dashboard</li>
-            <li onclick="openPage('tasks')">Tarefas</li>
-            <li onclick="openPage('notes')">Anotações</li>
-            <li onclick="openPage('calendar')">Agenda</li>
-            <li onclick="openPage('links')">Links</li>
-            <li onclick="openPage('shopping')">Compras</li>
-        </ul>
-    </aside>
 
-    <main id="content"></main>
+<body class="login-page">
 
-<script src="app.js"></script>
+<div class="login-box">
+    <h1>Organizador Pro</h1>
+
+    <input type="email" id="email" placeholder="E-mail">
+    <input type="password" id="password" placeholder="Senha">
+
+    <button onclick="login()">Entrar</button>
+
+    <button class="google-btn" onclick="loginGoogle()">
+        Entrar com Google
+    </button>
+
+    <p>Não tem conta? <a href="register.html">Criar conta</a></p>
+</div>
+
+<script src="auth.js"></script>
 </body>
 </html>
