@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+<script src="firebase-config.js"></script>
+<script src="auth.js"></script>
+<script src="db.js"></script>
+<script src="app.js"></script>
+</head>
+
+<body class="dashboard">
+
+<div class="sidebar">
+    <h2>Organizador Pro</h2>
+    <button onclick="showSection('tasks')">Tarefas</button>
+    <button onclick="showSection('notes')">Anotações</button>
+    <button onclick="showSection('shopping')">Compras</button>
+    <button onclick="showSection('links')">Links</button>
+    <button onclick="showSection('events')">Agenda</button>
+    <button onclick="logout()">Sair</button>
+</div>
+
+<div class="content">
+
+    <!-- Tarefas -->
+    <section id="tasks" class="section active">
+        <h1>Tarefas</h1>
+        <input id="taskInput" placeholder="Nova tarefa...">
+        <button onclick="createTask()">Adicionar</button>
+        <ul id="taskList"></ul>
+    </section>
+
+    <!-- Anotações -->
+    <section id="notes" class="section">
+        <h1>Anotações</h1>
+        <textarea id="notesArea"></textarea>
+        <button onclick="saveUserNotes()">Salvar</button>
+    </section>
+
+    <!-- Compras -->
+    <section id="shopping" class="section">
+        <h1>Compras</h1>
+        <input id="shopInput" placeholder="Novo item...">
+        <button onclick="createShopItem()">Adicionar</button>
+        <ul id="shopList"></ul>
+    </section>
+
+    <!-- Links -->
+    <section id="links" class="section">
+        <h1>Links</h1>
+        <input id="linkName" placeholder="Nome">
+        <input id="linkUrl" placeholder="URL">
+        <button onclick="createLink()">Salvar</button>
+        <ul id="linkList"></ul>
+    </section>
+
+    <!-- Agenda -->
+    <section id="events" class="section">
+        <h1>Agenda</h1>
+        <input id="eventText" placeholder="Descrição">
+        <input id="eventDate" type="date">
+        <button onclick="createEvent()">Adicionar</button>
+        <ul id="eventList"></ul>
+    </section>
+
+</div>
+
+</body>
+</html>
