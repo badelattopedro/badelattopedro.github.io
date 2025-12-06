@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizador Completo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <h2>📂 Menu</h2>
+        <ul>
+            <li onclick="openPage('dashboard')">Dashboard</li>
+            <li onclick="openPage('tasks')">Tarefas</li>
+            <li onclick="openPage('notes')">Anotações</li>
+            <li onclick="openPage('calendar')">Agenda</li>
+            <li onclick="openPage('links')">Links</li>
+            <li onclick="openPage('shopping')">Compras</li>
+        </ul>
+    </aside>
+
+    <main id="content"></main>
+
+<script src="app.js"></script>
+</body>
+</html>
